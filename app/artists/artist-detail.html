@@ -1,0 +1,16 @@
+<a ui-sref="artists()">Go back</a>
+<br/>
+<div>
+    <h1>{{$resolve.artist.name}}</h1>
+    <img ng-src="{{$resolve.artist.image[3]['#text']}}" alt="">
+    <div>
+        <div>
+            <h3>Info</h3>
+            <div><pre>{{$resolve.artist.bio.summary}}</pre></div>
+        </div>
+        <div>
+            <h3>Top 10 Tracks</h3>            
+            <artist-toptracks tracks="$resolve.tracks"></artist-toptracks>
+        </div>
+    </div>
+</div>
